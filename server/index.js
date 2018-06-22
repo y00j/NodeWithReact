@@ -5,7 +5,7 @@ const app = express();
 // app is a configuration to listen to requests coming in from node and route it to different route handlers
 
 app.get('/', (req, res) => {
-  res.send({ hi: 'there' });
+  res.send({ bye: "stuff" });
 });
 
 
