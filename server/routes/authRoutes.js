@@ -12,4 +12,13 @@ module.exports = (app) => {
   app.get('/auth/google/callback', passport.authenticate('google'));
   //app is a running express server. most projects will just use just one of these
   // app is a configuration to listen to requests coming in from node and route it to different route handlers
+
+  app.get('/api/logout', (req, res) => {
+    req.logout();
+    res.send(req.user);
+  });
+
+  app.get('/api/current_user', (req, res) => {
+    res.send(req.user);
+  });
 };
