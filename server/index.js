@@ -19,7 +19,7 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-require('./routes/authroutes')(app);
+require('./routes/authRoutes')(app);
 
 const PORT = process.env.PORT || 5000;
 //dynamic port binding with heroku --> sets default to 5000
